@@ -1,6 +1,7 @@
 import sys
-import traceback
-import logging
+# import traceback
+# import logging
+from src.logger import logging
 # Function to get detailed error message
 def error_msg_details(error, error_detail: sys):
     exc_type, exc_value, exc_tb = error_detail.exc_info()
@@ -20,9 +21,9 @@ class CustomException(Exception):
         return self.error_message
 
 # Example usage
-# if __name__=="__main__":
-#   try:
-#     a = 1 / 0
-#   except Exception as e:
-#     logging.info("Divide by zero error")
-#     raise CustomException(e, sys)
+if __name__=="__main__":
+  try:
+    a = 1 / 0
+  except Exception as e:
+    logging.info("Divide by zero error")
+    raise CustomException(e, sys)
