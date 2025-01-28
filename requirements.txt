@@ -6,5 +6,6 @@ catboost
 xgboost
 dill
 Flask
-gunicorn
+gunicorn==20.1.0
+
 # -e .
